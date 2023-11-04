@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans&display=swap');
+
+:root {
+    --color_black: #21242b;
+    --color_white: #fafafa;
+    --color_gray: #e2e0df;
+    --color_blue: #35bbca;
+    --color_orange: #e9585f;
+    --common_border: 1px solid var(--color_gray);
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.125;
+    letter-spacing: 0.25px;
+    color: var(--color_black);
+    background-color: var(--color_white);
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 8rem;
+    font-weight: 500;
+    line-height: 1;
+}
+
+h2 {
+    font-size: 5rem;
+    font-weight: 500;
+    line-height: 1;
+}
+
+h3 {
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1;
+}
+
+small {
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+}
+
+a {
+    display: inline-block;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+/* navbar style */
+.header {
+    height: 8rem;
+    border-bottom: var(--common_border);
+    display: flex;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 5rem;
+}
+
+.navbar_logo {
+    text-transform: lowercase;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.navbar_logo_span {
+    color: var(--color_blue);
+}
+
+.navbar_links {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.navbar_link_item {
+    position: relative;
+}
+
+.navbar_link_item::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: var(--color_blue);
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 100px;
+    bottom: -2.5px;
+    transition: width 300ms ease-in-out;
+}
+
+.navbar_link_item:hover:after {
+    width: 100%;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    padding: 5rem;
+}
+
+.hero_left {}
+
+.hero_image {
+    height: 500px;
+    width: auto;
+}
