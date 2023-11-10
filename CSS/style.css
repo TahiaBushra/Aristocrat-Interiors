@@ -612,6 +612,7 @@ img {
 .form_control>input::placeholder,
 .form_control>textarea::placeholder {
     color: var(--color_pink);
+    opacity: 40%;
 }
 
 .form_control>input:focus,
